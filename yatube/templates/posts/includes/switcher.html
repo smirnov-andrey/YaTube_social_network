@@ -1,0 +1,22 @@
+{% if user.is_authenticated %}
+  <div class="row my-3">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a
+          class="nav-link {% if index %}active{% endif %}"
+          {% if not index %}href="{% url 'posts:index' %}"{% endif %}
+        >
+          Все авторы
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+           class="nav-link {% if follow %}active{% endif %}"
+           {% if not follow %}href="{% url 'posts:follow_index' %}"{% endif %}
+        >
+          Избранные авторы
+        </a>
+      </li>
+    </ul>
+  </div>
+{% endif %}

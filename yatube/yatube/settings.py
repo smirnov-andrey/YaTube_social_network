@@ -93,8 +93,9 @@ USE_TZ = True
 
 CSRF_FAILURE_VIEW = 'core.views.csrf_failure'
 
-STATIC_URL = '/project_static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "project_static"),)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 POSTS_ON_PAGE = 10
 

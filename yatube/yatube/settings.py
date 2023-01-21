@@ -4,9 +4,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'k-mh2o4opbstwe(=&os#fk!%*d(pf7@5!5so$^iv-5o*+i=8$$'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
+    '51.250.73.138',
     'localhost',
     '127.0.0.1',
     '[::1]',
@@ -92,8 +93,8 @@ USE_TZ = True
 
 CSRF_FAILURE_VIEW = 'core.views.csrf_failure'
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_URL = '/project_static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "project_static"),)
 
 POSTS_ON_PAGE = 10
 
